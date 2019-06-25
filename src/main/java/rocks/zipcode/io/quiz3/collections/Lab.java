@@ -16,6 +16,7 @@ public class Lab {
     }
 
     public void setStatus(LabStatus labStatus) {
+      //  LabStatus = labStatus;
     }
 
     public LabStatus getStatus() {
