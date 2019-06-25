@@ -4,7 +4,28 @@ package rocks.zipcode.io.quiz3.fundamentals;
  * @author leon on 09/12/2018.
  */
 public class PigLatinGenerator {
+
     public String translate(String str) {
+
+        String[] splited = str.split("\\s+");
+
+        String strOut = "";
+
+        for (int m = 0; m < splited.length; m++) {
+
+            String strPass = splited[m];
+
+            strOut = strOut + engine(strPass);
+
+        }
+        return strOut;
+    }
+
+
+
+
+
+    public String engine(String str) {
 
         String vowl = "aeiouAEIOU";
 
@@ -18,19 +39,19 @@ public class PigLatinGenerator {
             }
         }
 
-            for (int k = 0; k < str.length(); k++) {
+        for (int k = 0; k < str.length(); k++) {
 
-                for (int i = 0; i < vowl.length(); i++) {
+            for (int i = 0; i < vowl.length(); i++) {
 
                 if (str.charAt(k) == vowl.charAt(i)) {
 
-                   String front = str.substring(0, k);
+                    String front = str.substring(0, k);
 
-                   String back = str.substring(k, str.length());
+                    String back = str.substring(k, str.length());
 
-                   str = back + front + "ay";
+                    str = back + front + "ay";
 
-                   System.out.println(str);
+                    System.out.println(str);
 
                     return str;
                 }
@@ -41,4 +62,5 @@ public class PigLatinGenerator {
 
         return str;
     }
+
 }
