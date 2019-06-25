@@ -17,6 +17,10 @@ public class PigLatinGenerator {
 
             strOut = strOut + engine(strPass);
 
+            if (m +1 < splited.length) {
+                strOut = strOut + " ";
+            }
+
         }
         return strOut;
     }
